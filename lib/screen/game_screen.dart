@@ -36,7 +36,11 @@ class _GameScreenState extends State<GameScreen> {
     Random random = Random();
     int firstNumber = random.nextInt(10) + 1; // Generates a number between 1 and 10
     int secondNumber = random.nextInt(10) + 1; // Generates another number between 1 and 10
-    return [firstNumber, secondNumber];
+    if(firstNumber == secondNumber){
+      return generateTwoRandomNumbers();
+    } else{
+      return [firstNumber, secondNumber];
+    }
   }
 
   int randomCorrectAnswer() {
