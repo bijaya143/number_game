@@ -40,7 +40,7 @@ class _GameScreenState extends State<GameScreen> {
   }
 
   int randomCorrectAnswer() {
-    List<int> numbers = generateTwoRandomNumbers();
+    List<int> numbers = [firstNumber, secondNumber];
     Random random = Random();
     int index = random.nextInt(numbers.length); // Generates a random index (0 or 1)
     return numbers[index];
